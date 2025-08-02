@@ -18,3 +18,30 @@ pet = {
         },
     }
 }
+
+order = {
+    "type": "object",
+    "required": ["id", "pet_id"],
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "pet_id": {
+            "type": "integer"
+        },
+        "status": {
+            "type": "string",
+            "enum": ["available", "pending", "sold"]
+        }
+    }
+}
+
+success_message = {
+    "type": "object",
+    "required": ["message"],
+    "properties": {
+        "message": {
+            "type": "string"
+        }
+    }
+}
